@@ -1,0 +1,102 @@
+/* ---------- Base ---------- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1c2b3a;
+    margin: 0;
+    padding: 24px;
+    /* gradient background (TP requirement) */
+    background: linear-gradient(135deg, #dfe9f5 0%, #b9cde6 100%);
+    min-height: 100vh;
+}
+
+/* ---------- Titles ---------- */
+h1 {
+    color: #1f3a5f;
+    border-bottom: 3px solid #1f3a5f;
+    padding-bottom: 6px;
+    margin-top: 32px;
+}
+
+/* the first h1 is the name: bigger, no underline */
+h1:first-of-type {
+    font-size: 2.4rem;
+    border-bottom: none;
+    margin-top: 0;
+}
+
+/* ---------- Tables ---------- */
+table {
+    background-color: white;               /* white tables (TP requirement) */
+    border-collapse: collapse;
+    width: 100%;                           /* always full width */
+    border: 1px solid #9fb6d3;
+    box-shadow: 0 2px 6px rgba(31, 58, 95, 0.15);
+}
+
+td {
+    padding: 10px 14px;
+    border: 1px solid #c9d7e8;
+    vertical-align: top;
+}
+
+/* different background on odd rows (TP requirement) */
+tr:nth-child(odd) {
+    background-color: #eef3fa;
+}
+
+/* row changes color on hover (TP requirement) */
+tr:hover {
+    background-color: #ffe3b8;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: #1f3a5f;
+    font-weight: 600;
+}
+
+/* orange on hover (TP requirement) */
+a:hover {
+    color: orange;
+}
+
+/* ---------- Images (for when you add a photo) ---------- */
+img {
+    width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* zoom on hover (TP requirement) */
+img:hover {
+    transform: scale(2);
+}
+
+/* ---------- Media query: small screens (TP requirement) ---------- */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 12px;
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    }
+
+    h1:first-of-type {
+        font-size: 1.8rem;
+    }
+
+    /* table always fully visible: cells stack vertically */
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    td {
+        border: none;
+        padding: 6px 12px;
+    }
+
+    tr {
+        border-bottom: 1px solid #c9d7e8;
+        padding: 6px 0;
+    }
+}
